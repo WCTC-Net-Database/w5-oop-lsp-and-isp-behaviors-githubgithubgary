@@ -2,23 +2,21 @@
 
 namespace W5_assignment_template.Models
 {
-    public class Goblin : IEntity
+    public class Goblin : IEntity, ISwimmable
     {
         public string Name { get; set; }
 
         public void Attack(IEntity target)
         {
-            Console.WriteLine($"{Name} attacks {target.Name} with a terrifying shout.");
+            Console.WriteLine($"{Name} attacks {target.Name} with a terrifying growl.");
         }
-
-        public void Fly()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Move()
         {
             Console.WriteLine($"{Name} moves aggressively.");
+        }
+        public void Swim()
+        {
+            Console.WriteLine($"{Name} sinks like lead ballons.");
         }
     }
 

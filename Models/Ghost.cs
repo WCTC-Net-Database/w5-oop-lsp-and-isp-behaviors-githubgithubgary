@@ -2,7 +2,7 @@
 
 namespace W5_assignment_template.Models
 {
-    public class Ghost : IEntity
+    public class Ghost : IEntity, IFlyable
     {
         public string Name { get; set; }
 
@@ -10,15 +10,13 @@ namespace W5_assignment_template.Models
         {
             Console.WriteLine($"{Name} attacks {target.Name} with a chilling touch.");
         }
-
-        public void Move()
-        {
-            Console.WriteLine($"{Name} floats silently.");
-        }
-
         public void Fly()
         {
             Console.WriteLine($"{Name} flies rapidly through the air.");
+        }
+        public void Move()
+        {
+            Console.WriteLine($"{Name} floats silently.");
         }
     }
 }

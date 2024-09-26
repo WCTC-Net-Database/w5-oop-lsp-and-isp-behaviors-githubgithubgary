@@ -33,6 +33,15 @@ The goal of this assignment is to refactor the existing `ConsoleRPG` program to 
    - Implement these behaviors in the new classes you create.
    - Ensure each behavior is appropriately encapsulated and extendable.
 
+   - I added two new behaviors
+        - **ICastable**:
+        - Interface: `public interface ICastable {void CastSpell(string? spellName); void CastSpell(string? spellName, IEntity target);}`
+        - Implementation in `Mage`: Defines `CastSpell(string spellName)` to allow the mage to perform magic also defines 
+                                    `CastSpell(string spellName, IEntity target)` to allow the mage to perform magic at another character.
+        - **ISwimmable**:
+        - Interface: `public interface ISwimmable {void Swim();}`
+        - Implementation in `Character` and `Goblin`: Defines `Swim()` to allow the entity to 'swim'.
+        
 3. **Integrate with `GameEngine`**:
    - Update the `GameEngine` to support the new behaviors.
    - Ensure the `GameEngine` can interact with entities dynamically using these new behaviors.

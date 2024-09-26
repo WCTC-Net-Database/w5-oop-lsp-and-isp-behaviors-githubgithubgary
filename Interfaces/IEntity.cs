@@ -2,10 +2,14 @@
 {
     public interface IEntity
     {
-        void Attack(IEntity target);
-        void Move();
-        void Fly();
         string Name { get; set; }
+        public void IEntity() { }
+        void Move();
+        void Attack(IEntity target);
+        public interface IFlyable
+        {
+            void Fly();
+        }
     }
 
 }

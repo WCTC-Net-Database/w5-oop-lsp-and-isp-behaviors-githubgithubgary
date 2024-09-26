@@ -2,7 +2,7 @@
 
 namespace W5_assignment_template.Models;
 
-public class Character : IEntity
+public class Character : IEntity, ISwimmable
 {
     public string Name { get; set; }
 
@@ -10,14 +10,12 @@ public class Character : IEntity
     {
         Console.WriteLine($"{Name} attacks {target.Name}");
     }
-
-    public void Fly()
-    {
-        throw new NotImplementedException();
-    }
-
     public void Move()
     {
         Console.WriteLine($"{Name} moves forward.");
+    }
+    public void Swim()
+    {
+        Console.WriteLine($"{Name} swims the from crawl.");
     }
 }
